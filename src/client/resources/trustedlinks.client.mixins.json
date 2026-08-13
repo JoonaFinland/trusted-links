@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.joona.trustedlinks.mixin.client",
+  "compatibilityLevel": "JAVA_25",
+  "client": ["ConfirmLinkScreenMixin", "ScreenMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

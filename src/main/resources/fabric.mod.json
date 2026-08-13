@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "trustedlinks",
+  "version": "${version}",
+  "name": "Trusted Links",
+  "description": "Bypasses Minecraft's URL confirmation only for explicitly trusted domains.",
+  "authors": ["joona"],
+  "license": "MIT",
+  "icon": "assets/trustedlinks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.joona.trustedlinks.TrustedLinksClient"]
+  },
+  "mixins": [
+    { "config": "trustedlinks.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
