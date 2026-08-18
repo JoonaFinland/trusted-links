@@ -59,6 +59,22 @@ public final class TrustedLinksClient implements ClientModInitializer {
 		}
 	}
 
+	public static synchronized List<String> getTrustedHostnames() {
+		return List.copyOf(trustedDomains);
+	}
+
+	public static synchronized boolean removeTrustedHostname(String hostname) {
+		String normalized = TrustedDomainMatcher.normalizeDomain(hostname);
+		if (normalized == null || !trustedDomains.contains(normalized)) return false;
+		List<String> domains = trustedDomains.stream()
+			.filter(domain -> !domain.equals(normalized))
+			.toList();
+		if (!saveConfig(configPath, new Config(domains))) return false;
+		trustedDomains = domains;
+		matcher = new TrustedDomainMatcher(domains);
+		LOGGER.info("Removed trusted hostname {} from {}", normalized, configPath);
+		return true;
+	}
 	private static List<String> sanitizeDomains(List<String> domains) {
 		if (domains == null) return List.of();
 		Set<String> sanitized = new LinkedHashSet<>();

@@ -4,12 +4,17 @@
   "version": "${version}",
   "name": "Trusted Links",
   "description": "Bypasses Minecraft's URL confirmation only for explicitly trusted domains.",
-  "authors": ["joona"],
+  "authors": ["JoonaFinland"],
+  "contact": {
+    "homepage": "https://github.com/JoonaFinland/trusted-links",
+    "issues": "https://github.com/JoonaFinland/trusted-links/issues"
+  },
   "license": "MIT",
   "icon": "assets/trustedlinks/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["dev.joona.trustedlinks.TrustedLinksClient"]
+    "client": ["dev.joona.trustedlinks.TrustedLinksClient"],
+    "modmenu": ["dev.joona.trustedlinks.TrustedLinksModMenu"]
   },
   "mixins": [
     { "config": "trustedlinks.client.mixins.json", "environment": "client" }

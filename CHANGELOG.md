@@ -4,6 +4,17 @@ All notable changes to Trusted Links will be documented here. The project follow
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-18
+
+### Added
+
+- Mod Menu configuration screen for viewing and removing trusted hostnames.
+- Trusted Links mod icon and project homepage and issue-tracker metadata.
+
+### Changed
+
+- Updated the displayed author name to JoonaFinland.
+
 ## [1.0.0] - 2026-08-13
 
 ### Added

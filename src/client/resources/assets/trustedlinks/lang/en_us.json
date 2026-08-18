@@ -1,3 +1,10 @@
 {
-  "trustedlinks.confirm.trust_hostname": "Yes & Trust Hostname"
+  "trustedlinks.confirm.trust_hostname": "Yes & Trust Hostname",
+  "trustedlinks.config.title": "Trusted Links",
+  "trustedlinks.config.empty": "No trusted hostnames yet.",
+  "trustedlinks.config.hint": "Select a hostname to remove it.",
+  "trustedlinks.config.remove": "Remove %s",
+  "trustedlinks.config.previous": "Previous",
+  "trustedlinks.config.next": "Next",
+  "trustedlinks.config.done": "Done"
 }
